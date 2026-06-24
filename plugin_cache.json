@@ -5,7 +5,7 @@
     "tool-tts": {
       "id": "tool-tts",
       "name": "文本转语音 TTS",
-      "version": "0.1.1",
+      "version": "0.1.0",
       "type": "tool",
       "description": "通过 Hiwonder I2C 语音模块播放 BareBrain 的文本回复。",
       "author": "BareBrain Labs",
@@ -47,7 +47,7 @@
     "tool-display": {
       "id": "tool-display",
       "name": "显示屏幕",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "type": "tool",
       "description": "驱动 1.8 英寸 128x160 RGB TFT，显示状态、回复摘要和调试信息。",
       "author": "BareBrain Labs",

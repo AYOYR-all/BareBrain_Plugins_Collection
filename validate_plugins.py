@@ -79,6 +79,12 @@ def validate_plugin(plugin: dict, index: int) -> list[str]:
             if error:
                 errors.append(error)
 
+    archive = plugin.get("archive")
+    if isinstance(version, str) and isinstance(archive, str):
+        release_marker = f"/releases/download/v{version}/"
+        if release_marker not in archive:
+            errors.append(f"{prefix}.archive must point to the v{version} release")
+
     checksum = plugin.get("checksum")
     if not isinstance(checksum, str) or not CHECKSUM_RE.match(checksum):
         errors.append(f"{prefix}.checksum must be sha256 followed by 64 lowercase hex characters")
