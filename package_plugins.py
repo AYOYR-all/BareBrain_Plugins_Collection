@@ -27,6 +27,7 @@ def package_plugin(plugin_dir: Path, output_dir: Path) -> tuple[str, str, Path]:
     with ZipFile(output, "w", ZIP_DEFLATED, compresslevel=9) as archive:
         for path in files:
             info = ZipInfo(path.relative_to(plugin_dir).as_posix(), date_time=(2026, 1, 1, 0, 0, 0))
+            info.create_system = 3
             info.compress_type = ZIP_DEFLATED
             info.external_attr = 0o100644 << 16
             archive.writestr(info, path.read_bytes(), compresslevel=9)
