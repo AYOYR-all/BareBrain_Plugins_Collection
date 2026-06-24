@@ -5,20 +5,21 @@
     "tool-tts": {
       "id": "tool-tts",
       "name": "文本转语音 TTS",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "type": "tool",
-      "description": "通过 Hiwonder I2C 语音模块播放 BareBrain 的文本回复。",
+      "description": "通过 Hiwonder WonderEcho I2C 模块播放预配置的语句 ID。",
       "author": "BareBrain Labs",
       "repo": "https://github.com/AYOYR-all/barebrain-mod-tts",
-      "archive": "https://github.com/AYOYR-all/barebrain-mod-tts/releases/download/v0.1.0/tool-tts.zip",
-      "checksum": "sha256:e2cb330c8cc635422291c22cd0ad5901325961103dfb35f3dccd886aeff1f028",
+      "archive": "https://github.com/AYOYR-all/barebrain-mod-tts/releases/download/v0.1.1/tool-tts.zip",
+      "checksum": "sha256:6bdb6ada0a6c61ac5739b4ef9d2d22de2de6cb4c3e0ea2de690c524036b7e313",
       "targets": [
         "esp32s3"
       ],
       "barebrain_min": "0.1.0",
       "barebrain_max": "0.x",
       "permissions": [
-        "gpio.write"
+        "gpio.write",
+        "i2c.write"
       ],
       "resources": {
         "gpio": [
