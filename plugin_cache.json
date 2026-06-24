@@ -1,0 +1,110 @@
+{
+  "schema": 1,
+  "generated_at": "2026-06-24T00:00:00Z",
+  "plugins": {
+    "tool-tts": {
+      "id": "tool-tts",
+      "name": "文本转语音 TTS",
+      "version": "0.1.0",
+      "type": "tool",
+      "description": "通过 Hiwonder I2C 语音模块播放 BareBrain 的文本回复。",
+      "author": "BareBrain Labs",
+      "repo": "https://github.com/AYOYR-all/barebrain-mod-tts",
+      "archive": "https://github.com/AYOYR-all/barebrain-mod-tts/releases/download/v0.1.0/tool-tts.zip",
+      "checksum": "sha256:e74295acb8b394eaba2502374decda0e3598d64f137b91c1497f2d6b242e34bd",
+      "targets": [
+        "esp32s3"
+      ],
+      "barebrain_min": "0.1.0",
+      "barebrain_max": "0.x",
+      "permissions": [
+        "gpio.write"
+      ],
+      "resources": {
+        "gpio": [
+          "configurable"
+        ],
+        "i2c": [
+          "configurable"
+        ],
+        "tasks": 1,
+        "flash_bytes_hint": 49152,
+        "psram_bytes_hint": 16384
+      },
+      "config_schema": {
+        "tts.i2c_sda": {
+          "type": "gpio",
+          "label": "I2C SDA",
+          "required": true
+        },
+        "tts.i2c_scl": {
+          "type": "gpio",
+          "label": "I2C SCL",
+          "required": true
+        }
+      }
+    },
+    "tool-display": {
+      "id": "tool-display",
+      "name": "显示屏幕",
+      "version": "0.1.0",
+      "type": "tool",
+      "description": "驱动 1.8 英寸 128x160 RGB TFT，显示状态、回复摘要和调试信息。",
+      "author": "BareBrain Labs",
+      "repo": "https://github.com/AYOYR-all/barebrain-mod-display",
+      "archive": "https://github.com/AYOYR-all/barebrain-mod-display/releases/download/v0.1.0/tool-display.zip",
+      "checksum": "sha256:6a41ea7b3bd637350bc6a08947cba15fccd9c9960474f41ccdabf208285f703a",
+      "targets": [
+        "esp32s3"
+      ],
+      "barebrain_min": "0.1.0",
+      "barebrain_max": "0.x",
+      "permissions": [
+        "gpio.write"
+      ],
+      "resources": {
+        "gpio": [
+          "configurable"
+        ],
+        "spi": [
+          "configurable"
+        ],
+        "tasks": 1,
+        "flash_bytes_hint": 57344,
+        "psram_bytes_hint": 8192
+      },
+      "config_schema": {
+        "display.spi_sclk": {
+          "type": "gpio",
+          "label": "SCL / SPI SCLK",
+          "required": true
+        },
+        "display.spi_mosi": {
+          "type": "gpio",
+          "label": "SDA / SPI MOSI",
+          "required": true
+        },
+        "display.dc": {
+          "type": "gpio",
+          "label": "DC",
+          "required": true
+        },
+        "display.reset": {
+          "type": "gpio",
+          "label": "RST",
+          "required": true
+        },
+        "display.cs": {
+          "type": "gpio",
+          "label": "CS",
+          "required": true
+        },
+        "display.backlight": {
+          "type": "gpio",
+          "label": "BLK 背光",
+          "required": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BareBrain Plugin Index",
+  "type": "object",
+  "required": ["schema", "plugins"],
+  "properties": {
+    "schema": { "const": 1 },
+    "generated_at": { "type": "string" },
+    "plugins": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/plugin" }
+    }
+  },
+  "$defs": {
+    "plugin": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "version",
+        "type",
+        "description",
+        "author",
+        "repo",
+        "archive",
+        "checksum",
+        "targets",
+        "permissions",
+        "resources"
+      ],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+        "name": { "type": "string", "minLength": 1 },
+        "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:[-+][A-Za-z0-9.-]+)?$" },
+        "type": { "enum": ["tool", "channel", "device", "service", "data", "bridge", "profile"] },
+        "description": { "type": "string", "minLength": 1 },
+        "author": { "type": "string", "minLength": 1 },
+        "repo": { "type": "string" },
+        "archive": { "type": "string" },
+        "checksum": { "type": "string", "pattern": "^sha256:.+" },
+        "targets": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "permissions": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "resources": { "type": "object" }
+      }
+    }
+  }
+}
