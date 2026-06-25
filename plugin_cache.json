@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-06-24T00:00:00Z",
+  "generated_at": "2026-06-25T10:08:00Z",
   "plugins": {
     "tool-tts": {
       "id": "tool-tts",
@@ -48,13 +48,13 @@
     "tool-display": {
       "id": "tool-display",
       "name": "显示屏幕",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "type": "tool",
       "description": "驱动 1.8 英寸 128x160 RGB TFT，显示状态、回复摘要和调试信息。",
       "author": "BareBrain Labs",
       "repo": "https://github.com/AYOYR-all/barebrain-mod-display",
-      "archive": "https://github.com/AYOYR-all/barebrain-mod-display/releases/download/v0.1.1/tool-display.zip",
-      "checksum": "sha256:d6bf5fc45f6596d4ec84fdd2fb3bca92684d874b3d03d67caa6991b7caffc7ee",
+      "archive": "https://github.com/AYOYR-all/barebrain-mod-display/releases/download/v0.1.2/tool-display.zip",
+      "checksum": "sha256:4f4678a38e75394757a4d70c553b439bc3672e8fd5ec6f76bf49fc4731c8c013",
       "targets": [
         "esp32s3"
       ],
