@@ -38,7 +38,7 @@
     },
     {
       "id": "tool-display",
-      "name": "显示屏幕",
+      "name": "SPI 屏幕",
       "version": "0.1.2",
       "type": "tool",
       "description": "驱动 1.8 英寸 128x160 RGB TFT，显示状态、回复摘要和调试信息。",
