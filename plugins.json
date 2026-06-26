@@ -99,7 +99,7 @@
       "author": "BareBrain Labs",
       "repo": "https://github.com/AYOYR-all/barebrain-mod-oled",
       "archive": "https://github.com/AYOYR-all/barebrain-mod-oled/releases/download/v0.1.1/tool-oled.zip",
-      "checksum": "sha256:7bff1211e660410d19c8511d09c9697be8c4270d9fe3859446092aba21f49faa",
+      "checksum": "sha256:7fcf7051114285ca1e12ab139604bdeeb4a861e4499b72dc55d25faf4239f5d8",
       "targets": ["esp32s3"],
       "barebrain_min": "0.1.0",
       "barebrain_max": "0.x",
