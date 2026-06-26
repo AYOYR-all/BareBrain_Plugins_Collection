@@ -89,6 +89,40 @@
           "required": true
         }
       }
+    },
+    {
+      "id": "tool-oled",
+      "name": "OLED 显示屏",
+      "version": "0.1.0",
+      "type": "tool",
+      "description": "驱动 4 针 I2C OLED 屏幕，显示状态、回复摘要和调试信息。",
+      "author": "BareBrain Labs",
+      "repo": "https://github.com/AYOYR-all/barebrain-mod-oled",
+      "archive": "https://github.com/AYOYR-all/barebrain-mod-oled/releases/download/v0.1.0/tool-oled.zip",
+      "checksum": "sha256:b4bfc70d99f7afbb4cde3ed5e741a2513309bff6422637d10598db4e441e8ee0",
+      "targets": ["esp32s3"],
+      "barebrain_min": "0.1.0",
+      "barebrain_max": "0.x",
+      "permissions": ["gpio.write", "i2c.write"],
+      "resources": {
+        "gpio": ["configurable"],
+        "i2c": ["configurable"],
+        "tasks": 1,
+        "flash_bytes_hint": 32768,
+        "psram_bytes_hint": 4096
+      },
+      "config_schema": {
+        "oled.i2c_scl": {
+          "type": "gpio",
+          "label": "SCL",
+          "required": true
+        },
+        "oled.i2c_sda": {
+          "type": "gpio",
+          "label": "SDA",
+          "required": true
+        }
+      }
     }
   ]
 }
