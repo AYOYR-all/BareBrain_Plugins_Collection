@@ -5,7 +5,7 @@
     {
       "id": "tool-tts",
       "name": "文本转语音 TTS",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "type": "tool",
       "description": "通过 Hiwonder WonderEcho I2C 模块播放预配置的语句 ID。",
       "author": "BareBrain Labs",
@@ -95,11 +95,11 @@
       "name": "OLED 显示屏",
       "version": "0.1.1",
       "type": "tool",
-      "description": "驱动 4 针 I2C OLED 屏幕，连接成功后显示时间、日期和星期。",
+      "description": "驱动 4 针 I2C OLED 屏幕，默认显示时间，也可被表情插件接管。",
       "author": "BareBrain Labs",
       "repo": "https://github.com/AYOYR-all/barebrain-mod-oled",
-      "archive": "https://github.com/AYOYR-all/barebrain-mod-oled/releases/download/v0.1.1/tool-oled.zip",
-      "checksum": "sha256:7fcf7051114285ca1e12ab139604bdeeb4a861e4499b72dc55d25faf4239f5d8",
+      "archive": "https://github.com/AYOYR-all/barebrain-mod-oled/releases/download/v0.1.2/tool-oled.zip",
+      "checksum": "sha256:96cbbcfd19e0d78f754f398af6e1f4fe9475155977bb8e2fc005a0e48c2d5118",
       "targets": ["esp32s3"],
       "barebrain_min": "0.1.0",
       "barebrain_max": "0.x",
@@ -123,6 +123,30 @@
           "required": true
         }
       }
+    },
+    {
+      "id": "tool-oled-face",
+      "name": "OLED 表情",
+      "version": "0.1.0",
+      "type": "tool",
+      "description": "接管 OLED 显示屏并显示待机、开心、思考、错误和说话表情。",
+      "author": "BareBrain Labs",
+      "repo": "https://github.com/AYOYR-all/barebrain-mod-oled-face",
+      "archive": "https://github.com/AYOYR-all/barebrain-mod-oled-face/releases/download/v0.1.0/tool-oled-face.zip",
+      "checksum": "sha256:e35c83fafb1fb5505c8462b69b84b74999f70d23a20c5c46b2b38324501fb58d",
+      "targets": ["esp32s3"],
+      "barebrain_min": "0.1.0",
+      "barebrain_max": "0.x",
+      "dependencies": ["tool-oled"],
+      "permissions": ["i2c.write"],
+      "resources": {
+        "gpio": [],
+        "i2c": ["uses-tool-oled"],
+        "tasks": 1,
+        "flash_bytes_hint": 24576,
+        "psram_bytes_hint": 4096
+      },
+      "config_schema": {}
     }
   ]
 }
