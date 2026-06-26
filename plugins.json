@@ -93,7 +93,7 @@
     {
       "id": "tool-oled",
       "name": "OLED 显示屏",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "type": "tool",
       "description": "驱动 4 针 I2C OLED 屏幕，默认显示时间，也可被表情插件接管。",
       "author": "BareBrain Labs",
