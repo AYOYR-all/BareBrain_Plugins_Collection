@@ -111,13 +111,13 @@
     {
       "id": "tool-oled",
       "name": "OLED 显示屏",
-      "version": "0.1.3",
+      "version": "0.1.4",
       "type": "tool",
-      "description": "驱动 4 针 I2C OLED 屏幕，自动探测 0x3C/0x3D，默认显示时间，也可被表情插件接管。",
+      "description": "?? 4 ? I2C OLED ??????? I2C ??? 0x3C/0x3D??????????????????",
       "author": "BareBrain Labs",
       "repo": "https://github.com/AYOYR-all/barebrain-mod-oled",
-      "archive": "https://github.com/AYOYR-all/barebrain-mod-oled/releases/download/v0.1.3/tool-oled.zip",
-      "checksum": "sha256:b387b9c4126fc256f0d4037dcefb150cc7cfd14b5aed2c1608cd7ef31f7506e9",
+      "archive": "https://github.com/AYOYR-all/barebrain-mod-oled/releases/download/v0.1.4/tool-oled.zip",
+      "checksum": "sha256:8df01be709aae67d16ee7c667534792f6d38f45032498ec111b2e5105873ab28",
       "targets": [
         "esp32s3"
       ],
