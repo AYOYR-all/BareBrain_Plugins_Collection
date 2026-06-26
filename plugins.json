@@ -113,7 +113,7 @@
       "name": "OLED 显示屏",
       "version": "0.1.4",
       "type": "tool",
-      "description": "?? 4 ? I2C OLED ??????? I2C ??? 0x3C/0x3D??????????????????",
+      "description": "驱动 4 针 I2C OLED 屏幕，自动扫描 I2C 并探测 0x3C/0x3D，默认显示时间，也可被表情插件接管。",
       "author": "BareBrain Labs",
       "repo": "https://github.com/AYOYR-all/barebrain-mod-oled",
       "archive": "https://github.com/AYOYR-all/barebrain-mod-oled/releases/download/v0.1.4/tool-oled.zip",
